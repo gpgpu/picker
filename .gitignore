@@ -11,3 +11,6 @@ tmp/**
 .settings/
 .loadpath
 /bin/
+
+/build/
+build/**
