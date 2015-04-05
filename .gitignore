@@ -10,3 +10,4 @@ tmp/**
 .classpath
 .settings/
 .loadpath
+/bin/

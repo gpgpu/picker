@@ -1,0 +1,1 @@
+insert into person values('ruidong', 1);
