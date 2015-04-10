@@ -1,1 +1,1 @@
-insert into person values('ruidong', 1);
+insert into person values('ruidong', 1), ('xiaohong', 2), ('zhan', 3), ('hua', 4), ('min', 5), ('jingwen', 6), ('qin', 7), ('huiwen', 8), ('wei', 9), ('aixia', 10);

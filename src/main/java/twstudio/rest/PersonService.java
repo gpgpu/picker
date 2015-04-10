@@ -6,6 +6,9 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import twstudio.domain.Person;
 import twstudio.repository.PersonRepo;
@@ -18,10 +21,13 @@ public class PersonService {
 	private PersonRepo repo;
 	
 	@GET
-	public String hello(){
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Person> hello(){
 		
-		Person p = repo.findById("ruidong");
+		List<Person> pList = repo.findAll();
+		Person p = new Person("jingming", 0);
+		pList.add(p);
 		
-		return p.toString();
+		return pList;
 	}
 }

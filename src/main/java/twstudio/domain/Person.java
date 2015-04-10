@@ -5,6 +5,19 @@ import javax.persistence.*;
 
 @Entity
 public class Person {
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public int getRank() {
+		return rank;
+	}
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
 	@Id
 	private String id;
 	private int rank;
