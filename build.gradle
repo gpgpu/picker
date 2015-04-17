@@ -1,3 +1,4 @@
+
 buildscript {
     repositories {
         mavenCentral()
@@ -7,13 +8,25 @@ buildscript {
     }
 }
 
+plugins {
+    id 'net.eikehirsch.react' version '0.3.1'
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
+
+version = '0.1-SNAPSHOT'
+
 jar {
     baseName = 'picker'
     version =  '0.1.0'
+}
+
+jsx{
+	sourcesDir = 'src/main/webapp'
+  	destDir    = 'src/main/webapp'
 }
 
 repositories {
@@ -32,6 +45,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jersey")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2:1.4.186")
+    compile("org.apache.logging.log4j:log4j:2.2")
     
     testCompile("org.springframework.boot:spring-boot-starter-test")
  //   testCompile("junit:junit")
@@ -40,3 +54,14 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
+
+task printVersion {
+doFirst {
+println "Before reading the project version"
+}
+doLast {
+println "Version: $version"
+}
+}
+printVersion.doFirst { println "First action" }
+printVersion << { println "Last action" }

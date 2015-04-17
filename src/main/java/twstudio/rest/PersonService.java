@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
 
 import twstudio.domain.Person;
 import twstudio.repository.PersonRepo;
-
+import org.apache.log4j.*;
 @Named
 @Path("/")
 public class PersonService {
@@ -20,10 +20,12 @@ public class PersonService {
 	@Inject
 	private PersonRepo repo;
 	
+	private static Logger log = LogManager.getLogger(PersonService.class);
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Person> hello(){
-		
+		log.info("calling rest services...");
 		List<Person> pList = repo.findAll();
 		Person p = new Person("jingming", 0);
 		pList.add(p);
