@@ -14,3 +14,7 @@ tmp/**
 
 /build/
 build/**
+
+node_modules/
+src/main/.module-cache/
+src/main/webapp/.module-cache/
