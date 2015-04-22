@@ -1,20 +1,67 @@
-var people;
-	$.get("/rest", function(data){
-		people = data;	
 
-var PeopleList = React.createClass({
+
+var PeopleBox = React.createClass({
+	displayName: "PeopleBox",
+	getInitialState: function(){
+		return {people: []};
+	},
+	getData: function(){
+		$.get("/rest", function(data){
+			this.setState({people: data});
+		}.bind(this));
+	},
+	componentDidMount: function(){
+		this.getData();
+	},
+	handleNewPersonSubmit: function(person){
+		var people = this.state.people;
+		var newOne = {id: "wei", rank: 11};
+		var newList = people.concat([newOne]);
+		this.setState({people: newList});
+	},
+	render: function(){
+		return (
+				<div>
+					<h2>List</h2>
+					<PeopleList data={this.state.people} />
+					<NewPersonForm onPersonSubmit={this.handleNewPersonSubmit} />
+				</div>
+		);				
+	}
+})
+
+var PeopleList = React.createClass({displayName: "PeopleList",
   render: function() {
-	var listItems = people.map(function(item){
-		return <li>{item.id} - {item.rank}</li>
+	var listItems = this.props.data.map(function(item){
+		return React.createElement("li", null, item.id, " - ", item.rank)
 	});
     return <ul>{listItems}</ul>
    
   }
 });
 
- React.render(
-    <PeopleList />,
+ 
+
+var NewPersonForm = React.createClass({
+	handleSubmit: function(e){
+		e.preventDefault();
+
+		this.props.onPersonSubmit({id: "aa", rank: 12});
+		return;
+	},
+	render: function(){
+		return (
+				<form onSubmit={this.handleSubmit}>
+				<input type="text" placeholder="id" />
+				<input type="text" placeholder="rank" />
+				<input type="submit" value="Create" />
+				</form>
+		)
+	}
+})
+
+React.render(
+    <PeopleBox />,
     document.getElementById('target')
-  );
-});
+);
 	

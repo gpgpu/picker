@@ -17,7 +17,7 @@ var PeopleBox = React.createClass({
 		var people = this.state.people;
 		var newOne = {id: "wei", rank: 11};
 		var newList = people.concat([newOne]);
-		this.setState({people: newList});
+		this.setState({people: people});
 	},
 	render: function(){
 		return (
@@ -45,7 +45,7 @@ var PeopleList = React.createClass({displayName: "PeopleList",
 var NewPersonForm = React.createClass({displayName: "NewPersonForm",
 	handleSubmit: function(e){
 		e.preventDefault();
-
+		alert("hehe");
 		this.props.onPersonSubmit({id: "aa", rank: 12});
 		return;
 	},

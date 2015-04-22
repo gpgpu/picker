@@ -13,18 +13,12 @@ var PeopleBox = React.createClass({
 	componentDidMount: function(){
 		this.getData();
 	},
-	handleNewPersonSubmit: function(person){
-		var people = this.state.people;
-		var newOne = {id: "wei", rank: 11};
-		var newList = people.concat([newOne]);
-		this.setState({people: newList});
-	},
 	render: function(){
 		return (
 				React.createElement("div", null, 
 					React.createElement("h2", null, "List"), 
 					React.createElement(PeopleList, {data: this.state.people}), 
-					React.createElement(NewPersonForm, {onPersonSubmit: this.handleNewPersonSubmit})
+					React.createElement(NewPersonForm, null)
 				)
 		);				
 	}
@@ -43,15 +37,9 @@ var PeopleList = React.createClass({displayName: "PeopleList",
  
 
 var NewPersonForm = React.createClass({displayName: "NewPersonForm",
-	handleSubmit: function(e){
-		e.preventDefault();
-
-		this.props.onPersonSubmit({id: "aa", rank: 12});
-		return;
-	},
 	render: function(){
 		return (
-				React.createElement("form", {onSubmit: this.handleSubmit}, 
+				React.createElement("form", null, 
 				React.createElement("input", {type: "text", placeholder: "id"}), 
 				React.createElement("input", {type: "text", placeholder: "rank"}), 
 				React.createElement("input", {type: "submit", value: "Create"})
