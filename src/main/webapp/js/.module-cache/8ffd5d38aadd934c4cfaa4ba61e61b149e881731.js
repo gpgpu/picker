@@ -15,12 +15,12 @@ var PeopleBox = React.createClass({
 	},
 	handleNewPersonSubmit: function(person){
 		var people = this.state.people;
-		var newOne = {"id": "wei", "rank": 11};
+		var newOne = {id: "wei", rank: 11};
+		$.post("/rest", newOne, function(data){
+			var newList = people.concat([newOne]);
+            this.setState({people: newList});
+		})
 
-		$.post("/rest", newOne, function(){
-				var newList = people.concat([newOne]);
-                            this.setState({people: newList});
-		}.bind(this));
 	},
 	render: function(){
 		return (

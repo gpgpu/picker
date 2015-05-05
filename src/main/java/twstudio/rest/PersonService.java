@@ -4,9 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -32,4 +30,12 @@ public class PersonService {
 		
 		return pList;
 	}
+
+	@POST
+//	@Consumes(MediaType.APPLICATION_JSON)
+	public void add(@FormParam("id") String id, @FormParam("rank") int rank) {
+		Person p = new Person(id, rank);
+		repo.save(p);
+	}
+
 }

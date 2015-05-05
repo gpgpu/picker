@@ -16,11 +16,21 @@ var PeopleBox = React.createClass({
 	handleNewPersonSubmit: function(person){
 		var people = this.state.people;
 		var newOne = {"id": "wei", "rank": 11};
-
-		$.post("/rest", newOne, function(){
+		$.ajax({
+			url: "/rest",
+			type: "POST",
+			contentType: "application/json",
+			data: newOne,
+			success: function(){
 				var newList = people.concat([newOne]);
-                            this.setState({people: newList});
-		}.bind(this));
+                this.setState({people: newList});
+			},
+			error: function(){
+				var newList = people.concat([newOne]);
+                this.setState({people: newList});
+			}
+		}).bind(this)
+
 	},
 	render: function(){
 		return (

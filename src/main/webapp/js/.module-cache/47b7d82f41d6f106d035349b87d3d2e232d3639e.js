@@ -20,7 +20,22 @@ var PeopleBox = React.createClass({
 		$.post("/rest", newOne, function(){
 				var newList = people.concat([newOne]);
                             this.setState({people: newList});
-		}.bind(this));
+		})
+		/*$.ajax({
+			url: "/rest",
+			type: "POST",
+		//	contentType: "application/json",
+			data: newOne,
+			success: function(){
+				var newList = people.concat([newOne]);
+                this.setState({people: newList});
+			},
+			error: function(){
+				var newList = people.concat([newOne]);
+                this.setState({people: newList});
+			}
+		}).bind(this)*/
+
 	},
 	render: function(){
 		return (
