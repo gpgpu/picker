@@ -15,6 +15,8 @@ tmp/**
 /build/
 build/**
 
+.gradle/*
+
 node_modules/
 src/main/.module-cache/
 src/main/webapp/.module-cache/
