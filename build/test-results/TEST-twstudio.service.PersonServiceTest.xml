@@ -1,82 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="twstudio.service.PersonServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2015-04-29T14:29:07" hostname="Taos-iMac.local" time="0.362">
+<testsuite name="twstudio.service.PersonServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-05-06T19:01:23" hostname="Taos-iMac.local" time="0.325">
   <properties/>
-  <testcase name="simpleTest" classname="twstudio.service.PersonServiceTest" time="0.362">
-    <failure message="org.junit.ComparisonFailure: expected:&lt;[ruidong 1]&gt; but was:&lt;[[{&quot;id&quot;:&quot;ruidong&quot;,&quot;rank&quot;:1},{&quot;id&quot;:&quot;xiaohong&quot;,&quot;rank&quot;:2},{&quot;id&quot;:&quot;zhan&quot;,&quot;rank&quot;:3},{&quot;id&quot;:&quot;hua&quot;,&quot;rank&quot;:4},{&quot;id&quot;:&quot;min&quot;,&quot;rank&quot;:5},{&quot;id&quot;:&quot;jingwen&quot;,&quot;rank&quot;:6},{&quot;id&quot;:&quot;qin&quot;,&quot;rank&quot;:7},{&quot;id&quot;:&quot;huiwen&quot;,&quot;rank&quot;:8},{&quot;id&quot;:&quot;wei&quot;,&quot;rank&quot;:9},{&quot;id&quot;:&quot;aixia&quot;,&quot;rank&quot;:10},{&quot;id&quot;:&quot;jingming&quot;,&quot;rank&quot;:0}]]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[ruidong 1]&gt; but was:&lt;[[{&quot;id&quot;:&quot;ruidong&quot;,&quot;rank&quot;:1},{&quot;id&quot;:&quot;xiaohong&quot;,&quot;rank&quot;:2},{&quot;id&quot;:&quot;zhan&quot;,&quot;rank&quot;:3},{&quot;id&quot;:&quot;hua&quot;,&quot;rank&quot;:4},{&quot;id&quot;:&quot;min&quot;,&quot;rank&quot;:5},{&quot;id&quot;:&quot;jingwen&quot;,&quot;rank&quot;:6},{&quot;id&quot;:&quot;qin&quot;,&quot;rank&quot;:7},{&quot;id&quot;:&quot;huiwen&quot;,&quot;rank&quot;:8},{&quot;id&quot;:&quot;wei&quot;,&quot;rank&quot;:9},{&quot;id&quot;:&quot;aixia&quot;,&quot;rank&quot;:10},{&quot;id&quot;:&quot;jingming&quot;,&quot;rank&quot;:0}]]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at twstudio.service.PersonServiceTest.simpleTest(PersonServiceTest.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:224)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
-	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-</failure>
-  </testcase>
-  <system-out><![CDATA[10:29:00.782 [Test worker] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class twstudio.service.PersonServiceTest].
-10:29:00.798 [Test worker] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper from class [org.springframework.boot.test.WebAppIntegrationTestContextBootstrapper]
-10:29:00.814 [Test worker] DEBUG o.s.b.t.WebAppIntegrationTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@31fdb837 declaringClass = 'twstudio.service.PersonServiceTest', classes = '{class twstudio.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
-10:29:00.820 [Test worker] DEBUG o.s.t.c.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [twstudio.service.PersonServiceTest]
-10:29:00.825 [Test worker] DEBUG o.s.test.util.ReflectionTestUtils - Setting field [propertySourceProperties] of type [null] on target [[WebMergedContextConfiguration@2956f79d testClass = PersonServiceTest, locations = '{}', classes = '{class twstudio.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = '', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]] to value [[Ljava.lang.String;@2bd5f27d]
-10:29:00.828 [Test worker] DEBUG o.s.b.t.WebAppIntegrationTestContextBootstrapper - @TestExecutionListeners is not present for class [twstudio.service.PersonServiceTest]: using defaults.
-10:29:00.846 [Test worker] INFO  o.s.b.t.WebAppIntegrationTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-10:29:00.872 [Test worker] INFO  o.s.b.t.WebAppIntegrationTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@847e8f0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@659f2aa8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@65c16251, org.springframework.test.context.transaction.TransactionalTestExecutionListener@504887f9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@67fff568]
-10:29:00.881 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
-10:29:00.891 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
-10:29:00.907 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
-10:29:00.911 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
-10:29:00.924 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
-10:29:00.925 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
-10:29:00.947 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
-10:29:00.947 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
-10:29:01.463 [Test worker] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@2bae45f5 testClass = PersonServiceTest, testInstance = twstudio.service.PersonServiceTest@661007d4, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2956f79d testClass = PersonServiceTest, locations = '{}', classes = '{class twstudio.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.IntegrationTest=true}', resourceBasePath = '', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]].
-10:29:01.523 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
-10:29:01.530 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
-10:29:01.530 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-10:29:01.534 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
+  <testcase name="simpleTest" classname="twstudio.service.PersonServiceTest" time="0.325"/>
+  <system-out><![CDATA[15:01:18.783 [Test worker] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class twstudio.service.PersonServiceTest].
+15:01:18.799 [Test worker] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper from class [org.springframework.boot.test.WebAppIntegrationTestContextBootstrapper]
+15:01:18.811 [Test worker] DEBUG o.s.b.t.WebAppIntegrationTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@484e043d declaringClass = 'twstudio.service.PersonServiceTest', classes = '{class twstudio.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+15:01:18.816 [Test worker] DEBUG o.s.t.c.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [twstudio.service.PersonServiceTest]
+15:01:18.819 [Test worker] DEBUG o.s.test.util.ReflectionTestUtils - Setting field [propertySourceProperties] of type [null] on target [[WebMergedContextConfiguration@7616c923 testClass = PersonServiceTest, locations = '{}', classes = '{class twstudio.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = '', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]] to value [[Ljava.lang.String;@29aecba2]
+15:01:18.820 [Test worker] DEBUG o.s.b.t.WebAppIntegrationTestContextBootstrapper - @TestExecutionListeners is not present for class [twstudio.service.PersonServiceTest]: using defaults.
+15:01:18.826 [Test worker] INFO  o.s.b.t.WebAppIntegrationTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:01:18.839 [Test worker] INFO  o.s.b.t.WebAppIntegrationTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4c123499, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7604b5b8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@20f5c8ac, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a8bf414, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6760b920]
+15:01:18.842 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
+15:01:18.842 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
+15:01:18.845 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
+15:01:18.845 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
+15:01:18.846 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
+15:01:18.846 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
+15:01:18.848 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [twstudio.service.PersonServiceTest]
+15:01:18.848 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [twstudio.service.PersonServiceTest]
+15:01:19.029 [Test worker] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@6aabe87 testClass = PersonServiceTest, testInstance = twstudio.service.PersonServiceTest@b893c67, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7616c923 testClass = PersonServiceTest, locations = '{}', classes = '{class twstudio.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.IntegrationTest=true}', resourceBasePath = '', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]].
+15:01:19.083 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+15:01:19.084 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+15:01:19.085 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+15:01:19.086 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -86,55 +32,55 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.2.2.RELEASE)
 
-2015-04-29 10:29:01.764  INFO 82162 --- [    Test worker] org.eclipse.jetty.util.log               : Logging initialized @2039ms
-2015-04-29 10:29:01.805  INFO 82162 --- [    Test worker] o.s.boot.SpringApplication               : Starting application on Taos-iMac.local with PID 82162 (/Users/taowang/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.2.2.RELEASE/c2495d6c08c742743366f50e25ad76f5dfcd9f75/spring-boot-1.2.2.RELEASE.jar started by taowang in /Users/taowang/myprojects/picker)
-2015-04-29 10:29:01.857  INFO 82162 --- [    Test worker] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55baac3: startup date [Wed Apr 29 10:29:01 EDT 2015]; root of context hierarchy
-2015-04-29 10:29:02.782  INFO 82162 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
-2015-04-29 10:29:03.257  INFO 82162 --- [    Test worker] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2015-04-29 10:29:03.518  INFO 82162 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bb56ba83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2015-04-29 10:29:03.558  INFO 82162 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2015-04-29 10:29:03.575  INFO 82162 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2015-04-29 10:29:03.586  INFO 82162 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2015-04-29 10:29:03.879  INFO 82162 --- [    Test worker] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
-2015-04-29 10:29:03.886  INFO 82162 --- [    Test worker] org.eclipse.jetty.server.Server          : jetty-9.2.9.v20150224
-2015-04-29 10:29:04.019  INFO 82162 --- [    Test worker] /                                        : Initializing Spring embedded WebApplicationContext
-2015-04-29 10:29:04.019  INFO 82162 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2168 ms
-2015-04-29 10:29:04.446  INFO 82162 --- [    Test worker] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
-2015-04-29 10:29:04.446  INFO 82162 --- [    Test worker] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
-2015-04-29 10:29:04.446  INFO 82162 --- [    Test worker] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2015-04-29 10:29:04.446  INFO 82162 --- [    Test worker] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'jerseyServlet' to [/rest/*]
-2015-04-29 10:29:04.460  INFO 82162 --- [    Test worker] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
-2015-04-29 10:29:04.761  INFO 82162 --- [    Test worker] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@50195074{/,file:/Users/taowang/myprojects/picker/src/main/webapp/,AVAILABLE}
-2015-04-29 10:29:04.768  INFO 82162 --- [    Test worker] org.eclipse.jetty.server.Server          : Started @5047ms
-2015-04-29 10:29:05.088  INFO 82162 --- [    Test worker] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/Users/taowang/myprojects/picker/build/resources/main/schema.sql]
-2015-04-29 10:29:05.098  INFO 82162 --- [    Test worker] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/Users/taowang/myprojects/picker/build/resources/main/schema.sql] in 10 ms.
-2015-04-29 10:29:05.196  INFO 82162 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-04-29 10:29:05.207  INFO 82162 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2015-05-06 15:01:19.227  INFO 95354 --- [    Test worker] org.eclipse.jetty.util.log               : Logging initialized @1058ms
+2015-05-06 15:01:19.260  INFO 95354 --- [    Test worker] o.s.boot.SpringApplication               : Starting application on Taos-iMac.local with PID 95354 (/Users/taowang/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.2.2.RELEASE/c2495d6c08c742743366f50e25ad76f5dfcd9f75/spring-boot-1.2.2.RELEASE.jar started by taowang in /Users/taowang/myprojects/picker)
+2015-05-06 15:01:19.284  INFO 95354 --- [    Test worker] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8123cc4: startup date [Wed May 06 15:01:19 EDT 2015]; root of context hierarchy
+2015-05-06 15:01:19.758  INFO 95354 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2015-05-06 15:01:20.018  INFO 95354 --- [    Test worker] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2015-05-06 15:01:20.214  INFO 95354 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22d4eb44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-05-06 15:01:20.228  INFO 95354 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-05-06 15:01:20.237  INFO 95354 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-05-06 15:01:20.242  INFO 95354 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-05-06 15:01:20.488  INFO 95354 --- [    Test worker] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2015-05-06 15:01:20.491  INFO 95354 --- [    Test worker] org.eclipse.jetty.server.Server          : jetty-9.2.9.v20150224
+2015-05-06 15:01:20.561  INFO 95354 --- [    Test worker] /                                        : Initializing Spring embedded WebApplicationContext
+2015-05-06 15:01:20.561  INFO 95354 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1280 ms
+2015-05-06 15:01:20.991  INFO 95354 --- [    Test worker] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2015-05-06 15:01:20.991  INFO 95354 --- [    Test worker] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2015-05-06 15:01:20.991  INFO 95354 --- [    Test worker] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2015-05-06 15:01:20.992  INFO 95354 --- [    Test worker] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'jerseyServlet' to [/rest/*]
+2015-05-06 15:01:20.994  INFO 95354 --- [    Test worker] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2015-05-06 15:01:21.230  INFO 95354 --- [    Test worker] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@76c5ade3{/,file:/Users/taowang/myprojects/picker/src/main/webapp/,AVAILABLE}
+2015-05-06 15:01:21.230  INFO 95354 --- [    Test worker] org.eclipse.jetty.server.Server          : Started @3061ms
+2015-05-06 15:01:21.446  INFO 95354 --- [    Test worker] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/Users/taowang/myprojects/picker/build/resources/main/schema.sql]
+2015-05-06 15:01:21.461  INFO 95354 --- [    Test worker] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/Users/taowang/myprojects/picker/build/resources/main/schema.sql] in 14 ms.
+2015-05-06 15:01:21.530  INFO 95354 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-05-06 15:01:21.538  INFO 95354 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-04-29 10:29:05.469  INFO 82162 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.8.Final}
-2015-04-29 10:29:05.471  INFO 82162 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2015-04-29 10:29:05.473  INFO 82162 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2015-04-29 10:29:05.742  INFO 82162 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-04-29 10:29:05.809  INFO 82162 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2015-04-29 10:29:05.888  INFO 82162 --- [    Test worker] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
-2015-04-29 10:29:06.069  INFO 82162 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
-2015-04-29 10:29:06.076  INFO 82162 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
-2015-04-29 10:29:06.426  INFO 82162 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55baac3: startup date [Wed Apr 29 10:29:01 EDT 2015]; root of context hierarchy
-2015-04-29 10:29:06.469  INFO 82162 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2015-04-29 10:29:06.470  INFO 82162 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
-2015-04-29 10:29:06.488  INFO 82162 --- [    Test worker] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: file:/Users/taowang/myprojects/picker/build/resources/main/public/index.html
-2015-04-29 10:29:06.498  INFO 82162 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
-2015-04-29 10:29:06.510  INFO 82162 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2015-04-29 10:29:06.510  INFO 82162 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2015-04-29 10:29:06.560  INFO 82162 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2015-04-29 10:29:07.093  INFO 82162 --- [    Test worker] /                                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2015-04-29 10:29:07.093  INFO 82162 --- [    Test worker] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2015-04-29 10:29:07.109  INFO 82162 --- [    Test worker] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
-2015-04-29 10:29:07.138  INFO 82162 --- [    Test worker] o.eclipse.jetty.server.ServerConnector   : Started ServerConnector@5614b4eb{HTTP/1.1}{0.0.0.0:8080}
-2015-04-29 10:29:07.144  INFO 82162 --- [    Test worker] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
-2015-04-29 10:29:07.147  INFO 82162 --- [    Test worker] o.s.boot.SpringApplication               : Started application in 5.596 seconds (JVM running for 7.426)
-2015-04-29 10:29:07.303  INFO 82162 --- [tp1196249021-18] twstudio.rest.PersonService              : calling rest services...
+2015-05-06 15:01:21.634  INFO 95354 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.8.Final}
+2015-05-06 15:01:21.636  INFO 95354 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-05-06 15:01:21.637  INFO 95354 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-05-06 15:01:21.903  INFO 95354 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-05-06 15:01:21.979  INFO 95354 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2015-05-06 15:01:22.071  INFO 95354 --- [    Test worker] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-05-06 15:01:22.259  INFO 95354 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2015-05-06 15:01:22.273  INFO 95354 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2015-05-06 15:01:22.712  INFO 95354 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@8123cc4: startup date [Wed May 06 15:01:19 EDT 2015]; root of context hierarchy
+2015-05-06 15:01:22.764  INFO 95354 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-05-06 15:01:22.765  INFO 95354 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2015-05-06 15:01:22.770  INFO 95354 --- [    Test worker] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: file:/Users/taowang/myprojects/picker/build/resources/main/public/index.html
+2015-05-06 15:01:22.780  INFO 95354 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2015-05-06 15:01:22.788  INFO 95354 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-05-06 15:01:22.788  INFO 95354 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-05-06 15:01:22.816  INFO 95354 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-05-06 15:01:23.308  INFO 95354 --- [    Test worker] /                                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2015-05-06 15:01:23.308  INFO 95354 --- [    Test worker] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2015-05-06 15:01:23.326  INFO 95354 --- [    Test worker] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2015-05-06 15:01:23.367  INFO 95354 --- [    Test worker] o.eclipse.jetty.server.ServerConnector   : Started ServerConnector@54d89dff{HTTP/1.1}{0.0.0.0:8080}
+2015-05-06 15:01:23.369  INFO 95354 --- [    Test worker] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2015-05-06 15:01:23.371  INFO 95354 --- [    Test worker] o.s.boot.SpringApplication               : Started application in 4.279 seconds (JVM running for 5.202)
+2015-05-06 15:01:23.492  INFO 95354 --- [tp1325796122-18] twstudio.rest.PersonService              : calling rest services...
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

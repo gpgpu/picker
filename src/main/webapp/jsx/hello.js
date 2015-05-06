@@ -15,12 +15,23 @@ var PeopleBox = React.createClass({
 	},
 	handleNewPersonSubmit: function(person){
 		var people = this.state.people;
-		var newOne = {"id": "wei", "rank": 11};
 
-		$.post("/rest", newOne, function(){
-				var newList = people.concat([newOne]);
-                            this.setState({people: newList});
-		}.bind(this));
+
+//		$.post("/rest", person, function(){
+//				var newList = people.concat([person]);
+//              this.setState({people: newList});
+//		}.bind(this));
+
+		$.ajax({
+			url: "/rest",
+			type: "POSt",
+			contentType: "application/json",
+			data: JSON.stringify(person),
+			success: function(){
+				var newList = people.concat([person]);
+                this.setState({people: newList});
+			}.bind(this)
+		})
 	},
 	render: function(){
 		return (
@@ -49,14 +60,23 @@ var NewPersonForm = React.createClass({
 	handleSubmit: function(e){
 		e.preventDefault();
 
-		this.props.onPersonSubmit({id: "aa", rank: 12});
+		var idValue = React.findDOMNode(this.refs.id).value.trim();
+		var rankValue = React.findDOMNode(this.refs.rank).value.trim();
+
+		var person = {};
+		person.id = idValue;
+		person.rank = rankValue;
+		this.props.onPersonSubmit(person);
+
+		React.findDOMNode(this.refs.id).value = '';
+        React.findDOMNode(this.refs.rank).value = '';
 		return;
 	},
 	render: function(){
 		return (
 				<form onSubmit={this.handleSubmit}>
-				<input type="text" placeholder="id" />
-				<input type="text" placeholder="rank" />
+				<input type="text" ref="id" placeholder="id" />
+				<input type="text" ref="rank" placeholder="rank" />
 				<input type="submit" value="Create" />
 				</form>
 		)

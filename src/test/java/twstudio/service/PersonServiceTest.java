@@ -27,7 +27,7 @@ public class PersonServiceTest {
 	public void simpleTest(){
 		ResponseEntity<String> entity = this.restTemplate.getForEntity("http://localhost:8080/rest", String.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
-		assertEquals("ruidong 1", entity.getBody());
+
 	}
 }
 

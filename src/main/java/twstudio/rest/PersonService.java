@@ -31,11 +31,16 @@ public class PersonService {
 		return pList;
 	}
 
-	@POST
+/*	@POST
 //	@Consumes(MediaType.APPLICATION_JSON)
 	public void add(@FormParam("id") String id, @FormParam("rank") int rank) {
 		Person p = new Person(id, rank);
 		repo.save(p);
+	} */
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void add(Person person){
+		repo.save(person);
 	}
 
 }

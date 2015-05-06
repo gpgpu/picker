@@ -60,20 +60,14 @@ var NewPersonForm = React.createClass({displayName: "NewPersonForm",
 	handleSubmit: function(e){
 		e.preventDefault();
 
-		var idValue = React.findDOMNode(this.refs.id).value.trim();
-		var rankValue = React.findDOMNode(this.refs.rank).value.trim();
-
-		var person = {};
-		person.id = idValue;
-		person.rank = rankValue;
-		this.props.onPersonSubmit(person);
+		this.props.onPersonSubmit({id: "aa", rank: 12});
 		return;
 	},
 	render: function(){
 		return (
 				React.createElement("form", {onSubmit: this.handleSubmit}, 
-				React.createElement("input", {type: "text", ref: "id", placeholder: "id"}), 
-				React.createElement("input", {type: "text", ref: "rank", placeholder: "rank"}), 
+				React.createElement("input", {type: "text", name: "id", placeholder: "id"}), 
+				React.createElement("input", {type: "text", name: "rank", placeholder: "rank"}), 
 				React.createElement("input", {type: "submit", value: "Create"})
 				)
 		)
