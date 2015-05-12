@@ -67,6 +67,9 @@ var NewPersonForm = React.createClass({displayName: "NewPersonForm",
 		person.id = idValue;
 		person.rank = rankValue;
 		this.props.onPersonSubmit(person);
+
+		React.findDOMNode(this.refs.id).value = '';
+        React.findDOMNode(this.refs.rank).value = '';
 		return;
 	},
 	render: function(){

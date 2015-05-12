@@ -2,6 +2,7 @@
 buildscript {
     repositories {
         mavenCentral()
+
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.2.RELEASE")
@@ -17,9 +18,16 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'jdepend'
+apply plugin: 'maven'
 
-
+group = 'org.twstudio'
 version = '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+}
+
 
 jar {
     baseName = 'picker'
@@ -31,8 +39,16 @@ jsx{
   	destDir    = 'src/main/webapp/js'
 }
 
-repositories {
-    mavenCentral()
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            parent {
+                groupId 'org.springframework.boot'
+                artifactId 'spring-boot-starter-parent'
+                version "1.2.2.RELEASE"
+            }
+        }
+    }
 }
 
 sourceCompatibility = 1.7
@@ -60,13 +76,21 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.4'
 }
 
-task printVersion {
-doFirst {
-println "Before reading the project version"
+apply plugin: 'maven-publish'
+
+
+
+publishing{
+    publications{
+        picker(MavenPublication){
+            pom.withXml {
+                def parentNode = asNode().appendNode('parent')
+                parentNode.appendNode('groupId','org.springframework.boot')
+                parentNode.appendNode('artifactId','spring-boot-starter-parent')
+                parentNode.appendNode('version','1.2.2.RELEASE')
+            }
+            from components.java
+            artifactId 'picker'
+        }
+    }
 }
-doLast {
-println "Version: $version"
-}
-}
-printVersion.doFirst { println "First action" }
-printVersion << { println "Last action" }

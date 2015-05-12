@@ -1,22 +1,21 @@
-*.jar
-*.war
-*.class
+**/*.jar
+**/*.war
+**/*.class
 
-.project
-.metadata
+**/.project
+**/.metadata
 bin/**
 tmp/**
 
 .classpath
 .settings/
 .loadpath
-/bin/
 
-/build/
 build/**
+
+**/.module-cache/**
 
 .gradle/*
 
-node_modules/
-src/main/.module-cache/
-src/main/webapp/.module-cache/
+node_modules/**
+**/.module-cache/**
