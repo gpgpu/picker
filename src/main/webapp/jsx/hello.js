@@ -1,54 +1,30 @@
-
-
-var PeopleBox = React.createClass({
-	displayName: "PeopleBox",
-	getInitialState: function(){
-		return {people: []};
-	},
-	getData: function(){
-		$.get("/rest", function(data){
-			this.setState({people: data});
-		}.bind(this));
-	},
-	componentDidMount: function(){
-		this.getData();
-	},
-	handleNewPersonSubmit: function(person){
-		var people = this.state.people;
-
-
-//		$.post("/rest", person, function(){
-//				var newList = people.concat([person]);
-//              this.setState({people: newList});
-//		}.bind(this));
-
-		$.ajax({
-			url: "/rest",
-			type: "POSt",
-			contentType: "application/json",
-			data: JSON.stringify(person),
-			success: function(){
-				var newList = people.concat([person]);
-                this.setState({people: newList});
-			}.bind(this)
-		})
+var SearchBox = React.createClass({
+	handleChange: function(){
+		var filterText = this.refs.filterTextInput.getDOMNode().value;
+		this.props.onUserInput(filterText);
 	},
 	render: function(){
-		return (
-				<div>
-					<h2>List</h2>
-					<PeopleList data={this.state.people} />
-					<NewPersonForm onPersonSubmit={this.handleNewPersonSubmit} />
-				</div>
-		);				
+		return <input
+			type="text"
+			placeholder="Search..."
+			value={this.props.filterText}
+			ref="filterTextInput"
+			onChange={this.handleChange}
+			 />
 	}
 })
 
+
+
 var PeopleList = React.createClass({displayName: "PeopleList",
   render: function() {
-	var listItems = this.props.data.map(function(item){
-		return React.createElement("li", null, item.id, " - ", item.rank)
-	});
+  	var listItems = [];
+  	this.props.data.forEach(function(person){
+  		if (person.id.indexOf(this.props.filterText) === -1 )
+  			return;
+  		listItems.push(<li>{person.id} - {person.rank}</li>)
+  	}.bind(this));
+
     return <ul>{listItems}</ul>
    
   }
@@ -80,6 +56,54 @@ var NewPersonForm = React.createClass({
 				<input type="submit" value="Create" />
 				</form>
 		)
+	}
+})
+
+var PeopleBox = React.createClass({
+	displayName: "PeopleBox",
+	getInitialState: function(){
+		return {
+			people: [],
+			filterText: ""
+		};
+	},
+	getData: function(){
+		$.get("/rest", function(data){
+			this.setState({people: data});
+		}.bind(this));
+	},
+	componentDidMount: function(){
+		this.getData();
+	},
+	handleSearchInput: function(filterText){
+		this.setState({
+			filterText: filterText
+		})
+	},
+	handleNewPersonSubmit: function(person){
+		var people = this.state.people;
+
+
+		$.ajax({
+			url: "/rest",
+			type: "POSt",
+			contentType: "application/json",
+			data: JSON.stringify(person),
+			success: function(){
+				var newList = people.concat([person]);
+                this.setState({people: newList});
+			}.bind(this)
+		})
+	},
+	render: function(){
+		return (
+				<div>
+					<h2>List</h2>
+					<SearchBox  filterText={this.state.filterText} onUserInput={this.handleSearchInput} />
+					<PeopleList data={this.state.people} filterText={this.state.filterText} />
+					<NewPersonForm onPersonSubmit={this.handleNewPersonSubmit} />
+				</div>
+		);
 	}
 })
 

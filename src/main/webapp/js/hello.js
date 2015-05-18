@@ -1,4 +1,8 @@
-
+var searchBox = React.createClass({displayName: "searchBox",
+	render: function(){
+		return React.createElement("input", {type: "text", placeholder: "Search..."})
+	}
+})
 
 var PeopleBox = React.createClass({
 	displayName: "PeopleBox",
@@ -37,6 +41,7 @@ var PeopleBox = React.createClass({
 		return (
 				React.createElement("div", null, 
 					React.createElement("h2", null, "List"), 
+					React.createElement("searchBox", null), 
 					React.createElement(PeopleList, {data: this.state.people}), 
 					React.createElement(NewPersonForm, {onPersonSubmit: this.handleNewPersonSubmit})
 				)
